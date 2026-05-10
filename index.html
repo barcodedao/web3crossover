@@ -62,7 +62,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .social-icon-link img, .comm-social-link img { width:34px;height:34px;object-fit:contain; }
 
 /* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 5rem;position:relative;overflow:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:6rem 2.5rem 5rem;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:
   radial-gradient(ellipse 60% 50% at 70% 40%, rgba(201,146,42,0.12) 0%, transparent 60%),
   radial-gradient(ellipse 40% 60% at 20% 80%, rgba(200,255,0,0.06) 0%, transparent 60%);
@@ -79,10 +79,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 
 h1{font-family:'Oswald',sans-serif;font-size:clamp(5rem,12vw,11rem);font-weight:700;line-height:.88;letter-spacing:-0.01em;text-transform:uppercase;animation:fadeUp .7s .1s ease both}
-h1 .line2{color:var(--orange);display:block}
-h1 .line3{-webkit-text-stroke:2px var(--white);color:transparent;display:block}
+h1 .line2{color:var(--orange);display:inline}
+h1 .line3{-webkit-text-stroke:2px var(--white);color:transparent;display:inline}
+h1 .line23{display:block}
 
-.hero-sub{margin-top:2rem;font-size:1.05rem;line-height:1.65;color:var(--muted);max-width:480px;animation:fadeUp .7s .2s ease both}
+.hero-sub{margin-top:2rem;font-size:1.05rem;line-height:1.65;color:var(--muted);max-width:680px;animation:fadeUp .7s .2s ease both}
 .hero-actions{display:flex;align-items:center;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;animation:fadeUp .7s .3s ease both}
 
 .btn{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.9rem 2rem;text-decoration:none;display:inline-block;transition:all .18s;cursor:pointer;border:none;font-weight:500}
@@ -210,8 +211,10 @@ footer{padding:4rem 2.5rem 2.5rem;border-top:1px solid var(--border)}
 @media(max-width:900px){
   nav{padding:1rem 1.5rem}
   .nav-link{display:none}
-  .hero{padding:5rem 1.5rem 4rem}
+  .hero{padding:3rem 1.5rem 4rem}
   h1{font-size:clamp(4rem,15vw,6rem)}
+  h1 .line2{display:block}
+  h1 .line3{display:block}
   .stats{grid-template-columns:1fr}
   .stat{border-right:none;border-bottom:1px solid var(--border);padding:1.75rem 1.5rem}
   .section,.tournament-section,.partner-section,.community-section{padding:5rem 1.5rem}
@@ -233,7 +236,7 @@ footer{padding:4rem 2.5rem 2.5rem;border-top:1px solid var(--border)}
     <a href="#what-we-do" class="nav-link">What We Do</a>
     <a href="#tournament" class="nav-link">Events</a>
     <a href="#partner" class="nav-link">Partner</a>
-    <a href="#community" class="nav-link">Community</a>
+    <a href="#community" class="nav-link">Proof of Crossover</a>
     <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -262,8 +265,8 @@ footer{padding:4rem 2.5rem 2.5rem;border-top:1px solid var(--border)}
     </div>
   </div>
   <div class="hero-content">
-    <div class="hero-tag"><span style="color:#fff">Live ·</span> <span style="color:var(--orange)">Season 01</span></div>
-    <h1>Where Sports<span class="line2">Meets</span><span class="line3">Web3.</span></h1>
+    <div class="hero-tag"><span style="color:#fff">Live ·</span> <span style="color:var(--orange)">Queen of the Court</span></div>
+    <h1>Where Sports<span class="line23"><span class="line2">Meets</span> <span class="line3">Web3.</span></span></h1>
     <p class="hero-sub">Sports won't solve our problems, but they can help fund solutions.</p>
     <div class="hero-actions">
       <a href="https://www.instagram.com/channel/AbbRDkHDZWPTADwJ/?igsh=MWlmMGNzb2tlems2ZA%3D%3D" target="_blank" class="btn btn-fill">Join Community</a>
