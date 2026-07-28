@@ -21,13 +21,13 @@
 :root{
   --black:#060606;
   --white:#F4F1EA;
-  --orange:#2d9ef0;
+  --orange:#2255ff;
   --acid:#C8FF00;
   --mid:#111111;
   --surface:#161616;
   --muted:#666;
   --border:rgba(255,255,255,0.07);
-  --border-warm:rgba(45,158,240,0.2);
+  --border-warm:rgba(34,85,255,0.2);
 }
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:'Instrument Sans',sans-serif;overflow-x:hidden}
@@ -64,7 +64,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:6rem 2.5rem 5rem;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:
-  radial-gradient(ellipse 60% 50% at 70% 40%, rgba(45,158,240,0.12) 0%, transparent 60%),
+  radial-gradient(ellipse 60% 50% at 70% 40%, rgba(34,85,255,0.12) 0%, transparent 60%),
   radial-gradient(ellipse 40% 60% at 20% 80%, rgba(200,255,0,0.06) 0%, transparent 60%);
 }
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 100% 100% at 50% 50%,black 0%,transparent 80%)}
@@ -164,7 +164,7 @@ h1 .line23{display:block}
 
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .gallery-item{aspect-ratio:1;background:var(--mid);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:rgba(255,255,255,.2);position:relative;overflow:hidden;transition:border-color .2s}
-.gallery-item:hover{border-color:rgba(45,158,240,0.3)}
+.gallery-item:hover{border-color:rgba(34,85,255,0.3)}
 .gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
 .gallery-item .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,6,.8) 0%,transparent 50%);opacity:0;transition:opacity .2s;display:flex;align-items:flex-end;padding:1rem}
 .gallery-item:hover .overlay{opacity:1}
