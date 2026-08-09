@@ -322,7 +322,7 @@ footer{padding:4rem 2.5rem 2.5rem;border-top:1px solid var(--border)}
       <div class="tourn-meta reveal">
         <div class="tm-cell">
           <div class="tm-key">Date</div>
-          <div class="tm-val">August 28, 2026</div>
+          <div class="tm-val">August 29, 2026</div>
         </div>
         <div class="tm-cell">
           <div class="tm-key">Format</div>
@@ -345,19 +345,15 @@ footer{padding:4rem 2.5rem 2.5rem;border-top:1px solid var(--border)}
 
     <div class="tourn-right">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem">
-        <div class="live-badge" style="margin-bottom:0;color:#fff;border-color:rgba(255,59,59,.25)">Live Roster</div>
-        <div class="bracket-toggle">
-          <button class="bt-btn" id="btn-male" onclick="switchRoster('male')">Men Roster</button>
-          <button class="bt-btn active" id="btn-female" onclick="switchRoster('female')">Women Roster</button>
-        </div>
+        <div class="live-badge" style="margin-bottom:0;color:#fff;border-color:rgba(255,59,59,.25)">Upcoming Matchups</div>
       </div>
 
       <div id="roster-female">
         <table class="roster-table">
-          <thead><tr><th>#</th><th>Player</th><th>IG Handles</th></tr></thead>
+          <thead><tr><th>#</th><th>1v1 Match Up</th><th>IG Handles</th></tr></thead>
           <tbody>
-            <tr><td>01</td><td>TBD</td><td class="exp">TBD</td></tr>
-            <tr><td>02</td><td>TBD</td><td class="exp">TBD</td></tr>
+            <tr><td>01</td><td>DAYLON vs CHAT</td><td class="exp">@daaylon, @chxtmxn</td></tr>
+            <tr><td>02</td><td>DJ vs SHAUD</td><td class="exp">@sugar_kaneee, @pwtm.shaud</td></tr>
             <tr><td>03</td><td>TBD</td><td class="exp">TBD</td></tr>
             <tr><td>04</td><td>TBD</td><td class="exp">TBD</td></tr>
             <tr><td>05</td><td>TBD</td><td class="exp">TBD</td></tr>
@@ -366,24 +362,7 @@ footer{padding:4rem 2.5rem 2.5rem;border-top:1px solid var(--border)}
             <tr><td>08</td><td>TBD</td><td class="exp">TBD</td></tr>
           </tbody>
         </table>
-        <p style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:var(--muted);margin-top:1rem;text-align:center;">* Roster updates weekly</p>
-      </div>
-
-      <div id="roster-male" style="display:none">
-        <table class="roster-table">
-          <thead><tr><th>#</th><th>Player</th><th>IG Handles</th></tr></thead>
-          <tbody>
-            <tr><td>01</td><td>TBD</td><td class="exp">TBD</td></tr>
-            <tr><td>02</td><td>TBD</td><td class="exp">TBD</td></tr>
-            <tr><td>03</td><td>TBD</td><td class="exp">TBD</td></tr>
-            <tr><td>04</td><td>TBD</td><td class="exp">TBD</td></tr>
-            <tr><td>05</td><td>TBD</td><td class="exp">TBD</td></tr>
-            <tr><td>06</td><td>TBD</td><td class="exp">TBD</td></tr>
-            <tr><td>07</td><td>TBD</td><td class="exp">TBD</td></tr>
-            <tr><td>08</td><td>TBD</td><td class="exp">TBD</td></tr>
-          </tbody>
-        </table>
-        <p style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:var(--muted);margin-top:1rem;text-align:center;">* Roster updates weekly</p>
+        <p style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:var(--muted);margin-top:1rem;text-align:center;">* Matchups update weekly</p>
       </div>
 </section>
 
@@ -594,12 +573,6 @@ navDropdown.querySelectorAll('a').forEach(link => {
   });
 });
 
-function switchRoster(roster) {
-  document.getElementById('roster-female').style.display = roster === 'female' ? 'block' : 'none';
-  document.getElementById('roster-male').style.display = roster === 'male' ? 'block' : 'none';
-  document.getElementById('btn-female').classList.toggle('active', roster === 'female');
-  document.getElementById('btn-male').classList.toggle('active', roster === 'male');
-}
 function switchBracket(bracket) {
   document.getElementById('bracket-black').style.display = bracket === 'black' ? 'block' : 'none';
   document.getElementById('bracket-white').style.display = bracket === 'white' ? 'block' : 'none';
