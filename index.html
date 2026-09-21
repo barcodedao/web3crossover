@@ -19,15 +19,17 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --black:#060606;
+  --black:#07060F;
   --white:#F4F1EA;
-  --orange:#2255ff;
-  --acid:#C8FF00;
-  --mid:#111111;
-  --surface:#161616;
-  --muted:#666;
-  --border:rgba(255,255,255,0.07);
-  --border-warm:rgba(34,85,255,0.2);
+  --orange:#5B3FD1;
+  --violet-deep:#231459;
+  --lavender:#9B8CE8;
+  --acid:#FF7518;
+  --mid:#120B1C;
+  --surface:#171024;
+  --muted:#6B6480;
+  --border:rgba(155,140,232,0.10);
+  --border-warm:rgba(91,63,209,0.28);
 }
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:'Instrument Sans',sans-serif;overflow-x:hidden}
@@ -64,8 +66,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:6rem 2.5rem 5rem;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:
-  radial-gradient(ellipse 60% 50% at 70% 40%, rgba(34,85,255,0.12) 0%, transparent 60%),
-  radial-gradient(ellipse 40% 60% at 20% 80%, rgba(200,255,0,0.06) 0%, transparent 60%);
+  radial-gradient(ellipse 60% 50% at 70% 40%, rgba(91,63,209,0.22) 0%, transparent 60%),
+  radial-gradient(ellipse 40% 60% at 20% 80%, rgba(255,117,24,0.07) 0%, transparent 60%);
 }
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 100% 100% at 50% 50%,black 0%,transparent 80%)}
 .hero-ticker{position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);overflow:hidden;pointer-events:none}
@@ -75,7 +77,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 
 .hero-content{position:relative;z-index:2;max-width:1100px}
 .hero-tag{display:inline-flex;align-items:center;gap:.5rem;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin-bottom:1.75rem;animation:fadeUp .7s ease both}
-.hero-tag::before{content:'';width:5px;height:5px;background:#FF3B3B;border-radius:50%;animation:blink 1.4s ease infinite}
+.hero-tag::before{content:'';width:5px;height:5px;background:var(--acid);border-radius:50%;animation:blink 1.4s ease infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 
 h1{font-family:'Oswald',sans-serif;font-size:clamp(5rem,12vw,11rem);font-weight:700;line-height:.88;letter-spacing:-0.01em;text-transform:uppercase;animation:fadeUp .7s .1s ease both}
@@ -88,7 +90,7 @@ h1 .line23{display:block}
 
 .btn{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.9rem 2rem;text-decoration:none;display:inline-block;transition:all .18s;cursor:pointer;border:none;font-weight:500}
 .btn-fill{background:var(--orange);color:var(--white)}
-.btn-fill:hover{background:#333333}
+.btn-fill:hover{background:#43309E}
 .btn-outline{background:transparent;color:var(--white);border:1px solid var(--border);display:inline-flex;align-items:center;gap:.5rem}
 .btn-outline:hover{border-color:rgba(255,255,255,.3)}
 
@@ -135,7 +137,7 @@ h1 .line23{display:block}
 .bt-btn{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;background:var(--black);color:var(--white);border:1px solid rgba(255,255,255,0.5);padding:.55rem 1rem;cursor:pointer;transition:background .2s,color .2s;white-space:nowrap}
 .bt-btn:hover{color:var(--white)}
 .bt-btn.active{background:var(--orange);color:var(--white)}
-.live-badge::before{content:'';width:5px;height:5px;background:#FF3B3B;border-radius:50%;animation:blink 1.2s ease infinite}
+.live-badge::before{content:'';width:5px;height:5px;background:var(--acid);border-radius:50%;animation:blink 1.2s ease infinite}
 .roster-table{width:100%;border-collapse:collapse;font-size:.85rem}
 .roster-table th{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:.75rem 1rem;border-bottom:1px solid var(--border)}
 .roster-table td{padding:.85rem 1rem;border-bottom:1px solid var(--border);color:var(--white)}
@@ -164,7 +166,7 @@ h1 .line23{display:block}
 
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .gallery-item{aspect-ratio:1;background:var(--mid);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:rgba(255,255,255,.2);position:relative;overflow:hidden;transition:border-color .2s}
-.gallery-item:hover{border-color:rgba(34,85,255,0.3)}
+.gallery-item:hover{border-color:rgba(155,140,232,0.32)}
 .gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
 .gallery-item .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,6,.8) 0%,transparent 50%);opacity:0;transition:opacity .2s;display:flex;align-items:flex-end;padding:1rem}
 .gallery-item:hover .overlay{opacity:1}
@@ -247,7 +249,7 @@ footer{padding:4rem 2.5rem 2.5rem;border-top:1px solid var(--border)}
   <a href="#tournament" role="menuitem">Events</a>
   <a href="#partner" role="menuitem">Partner</a>
   <a href="#community" role="menuitem">Proof of Crossover</a>
-  <a href="https://luma.com/0sdp48lj" target="_blank" role="menuitem" style="color:var(--orange);display:flex;align-items:center;gap:.5rem">Event Tickets <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 .587l3.668 7.431 8.204 1.192-5.936 5.787 1.401 8.168L12 19.771l-7.337 3.394 1.401-8.168L.128 9.21l8.204-1.192z"/></svg></a>
+  <a href="https://luma.com/ghl85ehe" target="_blank" role="menuitem" style="color:var(--orange);display:flex;align-items:center;gap:.5rem">Event Tickets <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 .587l3.668 7.431 8.204 1.192-5.936 5.787 1.401 8.168L12 19.771l-7.337 3.394 1.401-8.168L.128 9.21l8.204-1.192z"/></svg></a>
 </div>
 
 <!-- HERO -->
@@ -265,14 +267,13 @@ footer{padding:4rem 2.5rem 2.5rem;border-top:1px solid var(--border)}
     </div>
   </div>
   <div class="hero-content">
-    <div class="hero-tag"><span style="color:#fff">Coming Soon ·</span> <span style="color:var(--orange);font-weight:700">Crossover EP IV</span></div>
+    <div class="hero-tag"><span style="color:#fff">Coming Soon ·</span> <span style="color:var(--orange);font-weight:700">Scary Hours</span></div>
     <h1>Where Sports<span class="line23"><span class="line2">Meets</span> <span class="line3">Web3.</span></span></h1>
     <p class="hero-sub">Sports won't solve our problems, but they can help fund solutions.</p>
     <div class="hero-actions">
-      <a href="https://luma.com/0sdp48lj" target="_blank" class="btn btn-fill">Event Tickets</a>
+      <a href="https://luma.com/ghl85ehe" target="_blank" class="btn btn-fill">Event Tickets</a>
       <div style="position:relative;display:inline-block">
-        <a href="https://square.link/u/9n361N8J" target="_blank" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5);font-weight:600">Player Sign-Up →</a>
-        <span style="position:absolute;top:-10px;right:-10px;background:#ff3b3b;color:#fff;font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.05em;font-weight:700;padding:3px 8px;border-radius:999px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.3)">Currently Closed</span>
+        <a href="https://checkout.square.site/merchant/ML19GJSJM7VK5/checkout/MOGLZM7JASKH543WH5FD3HYG" target="_blank" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5);font-weight:600">Player Sign-Up →</a>
       </div>
     </div>
   </div>
@@ -285,7 +286,7 @@ footer{padding:4rem 2.5rem 2.5rem;border-top:1px solid var(--border)}
     <div class="stat-l">Events Hosted</div>
   </div>
   <div class="stat reveal">
-    <div class="stat-n">1.2K</div>
+    <div class="stat-n">1.5K</div>
     <div class="stat-l">Community</div>
   </div>
   <div class="stat reveal">
@@ -319,21 +320,21 @@ footer{padding:4rem 2.5rem 2.5rem;border-top:1px solid var(--border)}
     <div class="tourn-left">
       <div class="s-label">Featured Event</div>
       <div class="tourn-title-wrap">
-        <h2 class="tourn-title reveal">Crossover EP IV:<br><em style="color:var(--orange)">No Mercy</em></h2>
+        <h2 class="tourn-title reveal">Crossover EP V:<br><em style="color:var(--orange)">Scary Hours</em></h2>
       </div>
-      <p class="tourn-desc reveal">A 1v1 showcase powered by Hoop Social. On the court, athletes compete. Off the court, they learn — athlete tokenization, digital ownership, and the future of sports and finance.</p>
+      <p class="tourn-desc reveal">A 1v1 cash prize tournament in partnership with The Chapel Gym. On the court, athletes compete. Off the court, they learn — athlete tokenization, digital ownership, and the future of sports and finance.</p>
       <div class="tourn-meta reveal">
         <div class="tm-cell">
           <div class="tm-key">Date</div>
-          <div class="tm-val">August 29, 2026</div>
+          <div class="tm-val">October 31, 2026</div>
         </div>
         <div class="tm-cell">
           <div class="tm-key">Format</div>
-          <div class="tm-val">1v1</div>
+          <div class="tm-val">1v1 Tournament</div>
         </div>
         <div class="tm-cell">
           <div class="tm-key">Extras</div>
-          <div class="tm-val">Raffles, Games, Concessions</div>
+          <div class="tm-val">Halloween Vibes, Costume Contest, Raffles, Games, Concessions</div>
         </div>
         <div class="tm-cell">
           <div class="tm-key">Reminder</div>
@@ -341,34 +342,71 @@ footer{padding:4rem 2.5rem 2.5rem;border-top:1px solid var(--border)}
         </div>
       </div>
       <div class="tourn-actions reveal">
-        <a href="https://square.link/u/MfAeBc4U" target="_blank" class="btn btn-fill">Player Payment</a>
-        <a href="https://docs.google.com/document/d/1-xUE5zOA0w-Pv0bYipYRGvH-TittvEaxOS18nFkZM7A/edit?usp=sharing" target="_blank" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5)">View Rules →</a>
+        <a href="https://checkout.square.site/merchant/ML19GJSJM7VK5/checkout/MOGLZM7JASKH543WH5FD3HYG" target="_blank" class="btn btn-fill">Player Sign-Up</a>
+        <a href="https://docs.google.com/document/d/11ABMq09c7RPtlsQac4XXx-w9cXoQ77PQQlZ_hLoCkEM/edit?usp=drivesdk" target="_blank" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5)">View Rules →</a>
       </div>
     </div>
 
     <div class="tourn-right">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem">
-        <div class="live-badge" style="margin-bottom:0;color:#fff;border-color:rgba(255,59,59,.25)">Upcoming Matchups</div>
+        <div class="live-badge" style="margin-bottom:0;color:#fff;border-color:rgba(255,117,24,.3)">Live Roster</div>
+        <div class="bracket-toggle" role="tablist" aria-label="Roster">
+          <button type="button" class="bt-btn active" id="btn-mens" role="tab" aria-selected="true" aria-controls="roster-mens" onclick="switchRoster('mens')">Men</button>
+          <button type="button" class="bt-btn" id="btn-womens" role="tab" aria-selected="false" aria-controls="roster-womens" onclick="switchRoster('womens')">Women</button>
+        </div>
       </div>
 
-      <div id="roster-female">
+      <div id="roster-mens" role="tabpanel" aria-labelledby="btn-mens">
         <table class="roster-table">
-          <thead><tr><th>#</th><th>1v1 Match Up</th><th>IG Handles</th></tr></thead>
+          <thead><tr><th>#</th><th>Player</th><th>IG Handles</th></tr></thead>
           <tbody>
-            <tr><td>01</td><td>DAYLON vs CHAT</td><td class="exp">@daaylon, @chxtmxn</td></tr>
-            <tr><td>02</td><td>DJ vs SHAUD</td><td class="exp">@sugar_kaneee, @pwtm.shaud</td></tr>
-            <tr><td>03</td><td>JAY BOOB vs JAYLEN</td><td class="exp">@wheresjayboog, @jaylenthompsonn</td></tr>
-            <tr><td>04</td><td>BHB vs TAE</td><td class="exp">@baldheadbandit_11, @taejones_3</td></tr>
-            <tr><td>05</td><td>E vs K2</td><td class="exp">@05emmanuel, @k2g0tgame</td></tr>
-            <tr><td>06</td><td>CHI vs BABY FACE</td><td class="exp">@ik.christian, @babyfacegrem</td></tr>
-            <tr><td>07</td><td>SNOW vs VONN</td><td class="exp">@snow.brazy, @vonnyp__</td></tr>
-            <tr><td>08</td><td>RAY vs DRE</td><td class="exp">@scorpio_913, @coachandre_02</td></tr>
-            <tr><td>09</td><td>CJ vs ERIK</td><td class="exp">@cost2bross, @erikhiggens_</td></tr>
-            <tr><td>10</td><td>JANAE vs DAIZHA</td><td class="exp">@mstattedbuckets, @daizhaaaa__</td></tr>
+            <tr><td>01</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>02</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>03</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>04</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>05</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>06</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>07</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>08</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>09</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>10</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>11</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>12</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>13</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>14</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>15</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>16</td><td>TBD</td><td class="exp">&mdash;</td></tr>
           </tbody>
         </table>
-        <p style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:var(--muted);margin-top:1rem;text-align:center;">* Matchups update weekly</p>
       </div>
+
+      <div id="roster-womens" role="tabpanel" aria-labelledby="btn-womens" style="display:none">
+        <table class="roster-table">
+          <thead><tr><th>#</th><th>Player</th><th>IG Handles</th></tr></thead>
+          <tbody>
+            <tr><td>01</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>02</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>03</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>04</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>05</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>06</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>07</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>08</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>09</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>10</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>11</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>12</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>13</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>14</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>15</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+            <tr><td>16</td><td>TBD</td><td class="exp">&mdash;</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:var(--muted);margin-top:1rem;text-align:center;">* Roster updates weekly</p>
+    </div>
+  </div>
 </section>
 
 <!-- PARTNERSHIP -->
@@ -542,7 +580,7 @@ footer{padding:4rem 2.5rem 2.5rem;border-top:1px solid var(--border)}
     <div class="modal-tag">Let's Talk</div>
     <div class="modal-title">Interested in Partnering?</div>
     <div class="modal-body">We'd love to learn more about your brand and explore what a partnership could look like. Text us to schedule a quick call — we'll walk you through everything and answer any questions you have.</div>
-    <div class="modal-num" style="color:#7EB8D4">(469) 224-7206</div>
+    <div class="modal-num" style="color:var(--lavender)">(469) 224-7206</div>
     <div class="modal-hint">Text us to set up a time</div>
     <a href="sms:+14692247206&body=Hey! I checked out the Web3 Crossover partnership deck and I'm interested in learning more. When's a good time to connect?" class="modal-cta">Open Text Message →</a>
   </div>
@@ -578,11 +616,16 @@ navDropdown.querySelectorAll('a').forEach(link => {
   });
 });
 
-function switchBracket(bracket) {
-  document.getElementById('bracket-black').style.display = bracket === 'black' ? 'block' : 'none';
-  document.getElementById('bracket-white').style.display = bracket === 'white' ? 'block' : 'none';
-  document.getElementById('btn-black').classList.toggle('active', bracket === 'black');
-  document.getElementById('btn-white').classList.toggle('active', bracket === 'white');
+function switchRoster(roster) {
+  const isMens = roster === 'mens';
+  document.getElementById('roster-mens').style.display = isMens ? 'block' : 'none';
+  document.getElementById('roster-womens').style.display = isMens ? 'none' : 'block';
+  const btnMens = document.getElementById('btn-mens');
+  const btnWomens = document.getElementById('btn-womens');
+  btnMens.classList.toggle('active', isMens);
+  btnWomens.classList.toggle('active', !isMens);
+  btnMens.setAttribute('aria-selected', isMens);
+  btnWomens.setAttribute('aria-selected', !isMens);
 }
 
 const obs = new IntersectionObserver((entries) => {
